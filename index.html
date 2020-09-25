@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>time difference</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+    <!-- Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <!-- jQuery library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Time Difference</h1>
+        <form action="" class="diff-form">
+            <div class="form-row my-5">
+                <div class="form-group col-sm-4">
+                    <label for="ref-year">year</label>
+                    <input type="number" class="form-control" id="ref-year" placeholder="year">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="ref-month">month</label>
+                    <input type="number" class="form-control" id="ref-month" placeholder="month">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="ref-day">day</label>
+                    <input type="number" class="form-control" id="ref-day" placeholder="day">
+                </div>
+            </div>
+            <div class="form-row my-5">
+                <div class="form-group col-sm-4">
+                    <label for="ref-hours">hours</label>
+                    <input type="number" class="form-control" id="ref-hours" placeholder="hours">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="ref-minutes">minutes</label>
+                    <input type="number" class="form-control" id="ref-minutes" placeholder="minutes">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="ref-seconds">seconds</label>
+                    <input type="number" class="form-control" id="ref-seconds" placeholder="seconds">
+                </div>
+            </div>
+            <h2>add days hours and minutes to the time</h2>
+            <div class="form-row my-5">
+                <div class="form-group col-sm-4">
+                    <label for="days">days</label>
+                    <input type="number" class="form-control" id="days" placeholder="days">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for=-hours">hours</label>
+                    <input type="number" class="form-control" id="hours" placeholder="hours">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="minutes">minutes</label>
+                    <input type="number" class="form-control" id="minutes" placeholder="minutes">
+                </div>
+            </div>
+            <div class="form-group row justify-content-center">
+                <div class="col-sm-6">
+                  <button type="submit" class="btn btn-primary form-control">submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
