@@ -1,0 +1,44 @@
+h1, h2 {
+    text-transform: capitalize;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.pop-container {
+    visibility: hidden;
+    position: fixed;
+    background: rgb(0 0 0 / 65%);
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    z-index: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-result {
+    visibility: visible;
+}
+
+.result {
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 1.5em;
+}
+
+.future-date {
+    font-weight: 500;
+    font-size: 2em;
+}
