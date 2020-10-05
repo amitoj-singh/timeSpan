@@ -8,3 +8,5 @@ Get the time after adding given number of days, hours and minutes.
 
 ## Output: 
 * Date and time after entered number of days, hours and minutes from reference time
+
+Go through [contributing guidelines](https://github.com/amitoj-singh/time-difference/blob/master/Contributing.md).
