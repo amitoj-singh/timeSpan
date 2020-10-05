@@ -18,6 +18,7 @@ const result = document.querySelector(".result");
 const popContainer = document.querySelector(".pop-container");
 
 
+
 form.addEventListener('submit', function(e) {
     // prevents default behaviour of form submission
     e.preventDefault();
@@ -53,15 +54,17 @@ form.addEventListener('submit', function(e) {
 
     // Returns the tempalate string fo result date-time
     function getDisplayDate(curDate, datum) {
-        return `<p>${format(days)} days ${format(hours)} hours ${format(minutes)} mins from ${curDate.getFullYear()}, ${months[curDate.getMonth()]} ${format(curDate.getDate())}, ${format(curDate.getHours())}:${format(curDate.getMinutes())} wil be <br>
+        return `<img src="close.png" class="close" height="30px" onclick="hidePopContaniner()"><p>${format(days)} days ${format(hours)} hours ${format(minutes)} mins from ${curDate.getFullYear()}, ${months[curDate.getMonth()]} ${format(curDate.getDate())}, ${format(curDate.getHours())}:${format(curDate.getMinutes())} wil be <br>
         <span class="future-date">${datum.getFullYear()}, ${months[datum.getMonth()]} ${format(datum.getDate())}, ${format(datum.getHours())}:${format(datum.getMinutes())}</span>
     </p>`;
     }
 });
+const close = document.querySelector(".close");
 
-popContainer.addEventListener("click", function() {
+const hidePopContaniner=()=>{
     popContainer.classList.remove('show-result');
-});
+};
+
 
 function format(value) {
     if (value < 10)
