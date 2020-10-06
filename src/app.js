@@ -48,9 +48,9 @@ form.addEventListener('submit', function(e) {
     const refMinute = parseInt(document.getElementById('ref-minutes').value);
     const refSecond = parseInt(document.getElementById('ref-seconds').value);
     // Values to be added in the time
-    const days = parseInt(document.getElementById("days").value);
-    const hours = parseInt(document.getElementById("hours").value);
-    const minutes = parseInt(document.getElementById("minutes").value);
+    const days = parseInt(document.getElementById("days").value) || 0;
+    const hours = parseInt(document.getElementById("hours").value) || 0;
+    const minutes = parseInt(document.getElementById("minutes").value) || 0;
 
     console.log(refYear, refMonth, refDay, refHour, refMinute, refSecond);
 
