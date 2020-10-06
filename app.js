@@ -17,8 +17,6 @@ const form = document.querySelector(".diff-form");
 const result = document.querySelector(".result");
 const popContainer = document.querySelector(".pop-container");
 
-
-
 form.addEventListener('submit', function(e) {
     // prevents default behaviour of form submission
     e.preventDefault();
@@ -60,6 +58,7 @@ form.addEventListener('submit', function(e) {
     </p>`;
     }
 });
+
 const close = document.querySelector(".close");
 
 const hidePopContainer=()=>{
