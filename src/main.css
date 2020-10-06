@@ -2,10 +2,14 @@ h1, h2 {
     text-transform: capitalize;
 }
 
-h1 {
-    text-align: center;
-    position: relative;
-    z-index: 1;
+.time {
+    font-weight: bold;
+    color: #FD7827;
+}
+
+.tagline {
+    font-size: 0.8em;
+    margin-top: -5px !important;
 }
 
 .pop-container {
@@ -46,8 +50,4 @@ h1 {
     position: absolute;
     right: 20px;
     top:20px;   
-}
-
-.hide {
-    display:none;
 }

@@ -53,7 +53,7 @@ form.addEventListener('submit', function(e) {
     // Returns the tempalate string fo result date-time
     function getDisplayDate(curDate, datum) {
         return `<i class="far fa-times-circle close" onclick="hidePopContainer()"></i>
-        <p>${format(days)} days ${format(hours)} hours ${format(minutes)} mins from ${curDate.getFullYear()}, ${months[curDate.getMonth()]} ${format(curDate.getDate())}, ${format(curDate.getHours())}:${format(curDate.getMinutes())} wil be <br>
+        <p>${format(days)} days ${format(hours)} hours ${format(minutes)} mins from ${curDate.getFullYear()}, ${months[curDate.getMonth()]} ${format(curDate.getDate())}, ${format(curDate.getHours())}:${format(curDate.getMinutes())} will be <br>
         <span class="future-date">${datum.getFullYear()}, ${months[datum.getMonth()]} ${format(datum.getDate())}, ${format(datum.getHours())}:${format(datum.getMinutes())}</span>
     </p>`;
     }
@@ -64,7 +64,6 @@ const close = document.querySelector(".close");
 const hidePopContainer=()=>{
     popContainer.classList.remove('show-result');
 };
-
 
 function format(value) {
     if (value < 10)
