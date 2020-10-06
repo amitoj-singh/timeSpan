@@ -30,8 +30,7 @@ h1 {
 
 .result {
     padding: 10%;
-    display: flex;
-    align-items: center;
+    position: relative;
     text-align: center;
     background-color: white;
     border-radius: 50px;
@@ -41,4 +40,14 @@ h1 {
 .future-date {
     font-weight: 500;
     font-size: 2em;
+}
+
+.close{
+    position: absolute;
+    right: 20px;
+    top:20px;   
+}
+
+.hide {
+    display:none;
 }
