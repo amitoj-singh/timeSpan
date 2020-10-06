@@ -31,8 +31,6 @@ h1 {
 .result {
     padding: 10%;
     position: relative;
-    display: flex;
-    align-items: center;
     text-align: center;
     background-color: white;
     border-radius: 50px;
@@ -47,8 +45,7 @@ h1 {
 .close{
     position: absolute;
     right: 20px;
-    top:20px;
-   
+    top:20px;   
 }
 
 .hide {
