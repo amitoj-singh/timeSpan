@@ -10,4 +10,9 @@ Get the time after adding given number of days, hours and minutes.
 ## Output: 
 * Date and time after entered number of days, hours and minutes from reference time
 
+### How to run in local Machine?
+- fork this repository.
+- clone forked repository in your local machine.
+- open src/index.html file in your browser to run the application.
+
 Go through [contributing guidelines](https://github.com/amitoj-singh/time-difference/blob/master/Contributing.md).
