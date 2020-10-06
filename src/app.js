@@ -15,13 +15,9 @@ const months = [
 
 var d = new Date();
 
-    // convert to msec
-    // subtract local time zone offset
-    // get UTC time in msec
 var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
 
-    // create new Date object for different city
-    // using supplied offset
+
 var nd = new Date(utc + (3600000*5.5));
 
 console.log(nd.toLocaleString())
@@ -42,25 +38,27 @@ form.addEventListener('submit', function(e) {
     e.preventDefault();
 
     // Get the date values for current date
-    const refYear = parseInt(document.getElementById("ref-year").value);
-    const refMonth = parseInt(document.getElementById('ref-month').value);
-    const refDay = parseInt(document.getElementById('ref-day').value);
-    const refHour = parseInt(document.getElementById('ref-hours').value);
-    const refMinute = parseInt(document.getElementById('ref-minutes').value);
-    const refSecond = parseInt(document.getElementById('ref-seconds').value);
+    const refYear = parseInt(document.getElementById("ref-year").value === "" ? nd.getFullYear() : document.getElementById("ref-year").value);
+    const refMonth = parseInt(document.getElementById('ref-month').value === "" ? nd.getMonth()+1 : document.getElementById("ref-month").value);
+    const refDay = parseInt(document.getElementById('ref-day').value === "" ? nd.getDate() : document.getElementById("ref-day").value);
+    const refHour = parseInt(document.getElementById('ref-hours').value === "" ? nd.getHours() : document.getElementById("ref-hours").value);
+    const refMinute = parseInt(document.getElementById('ref-minutes').value === "" ? nd.getMinutes() : document.getElementById("ref-minutes").value);
+    const refSecond = parseInt(document.getElementById('ref-seconds').value === "" ? nd.getSeconds() : document.getElementById("ref-seconds").value);
     // Values to be added in the time
-    const days = parseInt(document.getElementById("days").value);
-    const hours = parseInt(document.getElementById("hours").value);
-    const minutes = parseInt(document.getElementById("minutes").value);
+    const days = parseInt(document.getElementById("days").value === "" ? 0 : document.getElementById("days").value);
+    const hours = parseInt(document.getElementById("hours").value === "" ? 0 : document.getElementById("hours").value);
+    const minutes = parseInt(document.getElementById("minutes").value === "" ? 0 : document.getElementById("minutes").value);
 
     console.log(refYear, refMonth, refDay, refHour, refMinute, refSecond);
     
     let curDate = new Date(refYear, refMonth-1, refDay, refHour, refMinute, refSecond);
     let curTime = curDate.getTime();
+    console.log(curTime);
     let milisec = (days*24*60*60*1000) + (hours*60*60*1000) + (minutes*60*1000);
 
     // Calculate future time and date
     let futureTime = curTime + milisec;
+    console.log(futureTime)
     let futureDate = new Date(futureTime);
 
     console.log(futureDate);
