@@ -13,6 +13,26 @@ const months = [
     'Dec'
 ]
 
+var d = new Date();
+
+    // convert to msec
+    // subtract local time zone offset
+    // get UTC time in msec
+var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+
+    // create new Date object for different city
+    // using supplied offset
+var nd = new Date(utc + (3600000*5.5));
+
+console.log(nd.toLocaleString())
+
+document.getElementById("ref-year").value = nd.getFullYear();
+document.getElementById("ref-month").value = nd.getMonth()+1;
+document.getElementById("ref-day").value = nd.getDate();
+document.getElementById("ref-hours").value = nd.getHours();
+document.getElementById("ref-minutes").value = nd.getMinutes();
+document.getElementById("ref-seconds").value = nd.getSeconds();
+
 const form = document.querySelector(".diff-form");
 const result = document.querySelector(".result");
 const popContainer = document.querySelector(".pop-container");
