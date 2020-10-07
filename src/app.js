@@ -22,7 +22,6 @@ const popContainer = document.querySelector(".pop-container");
 document.addEventListener('DOMContentLoaded', function() {
     // Get current date in GMT
     var d = new Date();
-    var nd = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
 
     // Create Date object in IST using 'd'
     var dateIST = new Date(d.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
