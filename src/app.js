@@ -37,6 +37,24 @@ const form = document.querySelector(".diff-form");
 const result = document.querySelector(".result");
 const popContainer = document.querySelector(".pop-container");
 
+//adding event listener to initialize Date when page is loaded
+// Todo: Below Event Listener can be replaced with jQuery document.ready() but require jQuery lib
+document.addEventListener('DOMContentLoaded', function() {
+    // Get current date in GMT
+    var d = new Date();
+
+    // Create Date object in IST using 'd'
+    var dateIST = new Date(d.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+
+    // Set the date values to input boxes
+    document.getElementById("ref-year").value = dateIST.getFullYear();
+    document.getElementById('ref-month').value = dateIST.getMonth() + 1;
+    document.getElementById('ref-day').value = dateIST.getDate();
+    document.getElementById('ref-hours').value = dateIST.getHours();
+    document.getElementById('ref-minutes').value = dateIST.getMinutes();
+    document.getElementById('ref-seconds').value = dateIST.getSeconds();
+});
+
 form.addEventListener('submit', function(e) {
     // prevents default behaviour of form submission
     e.preventDefault();
@@ -49,15 +67,15 @@ form.addEventListener('submit', function(e) {
     const refMinute = parseInt(document.getElementById('ref-minutes').value);
     const refSecond = parseInt(document.getElementById('ref-seconds').value);
     // Values to be added in the time
-    const days = parseInt(document.getElementById("days").value);
-    const hours = parseInt(document.getElementById("hours").value);
-    const minutes = parseInt(document.getElementById("minutes").value);
+    const days = parseInt(document.getElementById("days").value) || 0;
+    const hours = parseInt(document.getElementById("hours").value) || 0;
+    const minutes = parseInt(document.getElementById("minutes").value) || 0;
 
     console.log(refYear, refMonth, refDay, refHour, refMinute, refSecond);
-    
-    let curDate = new Date(refYear, refMonth-1, refDay, refHour, refMinute, refSecond);
+
+    let curDate = new Date(refYear, refMonth - 1, refDay, refHour, refMinute, refSecond);
     let curTime = curDate.getTime();
-    let milisec = (days*24*60*60*1000) + (hours*60*60*1000) + (minutes*60*1000);
+    let milisec = (days * 24 * 60 * 60 * 1000) + (hours * 60 * 60 * 1000) + (minutes * 60 * 1000);
 
     // Calculate future time and date
     let futureTime = curTime + milisec;
@@ -81,7 +99,7 @@ form.addEventListener('submit', function(e) {
 
 const close = document.querySelector(".close");
 
-const hidePopContainer=()=>{
+const hidePopContainer = () => {
     popContainer.classList.remove('show-result');
 };
 
