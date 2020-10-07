@@ -50,8 +50,6 @@ form.addEventListener('submit', function(e) {
     const hours = parseInt(document.getElementById("hours").value) || 0;
     const minutes = parseInt(document.getElementById("minutes").value) || 0;
 
-    console.log(refYear, refMonth, refDay, refHour, refMinute, refSecond);
-
     let curDate = new Date(refYear, refMonth - 1, refDay, refHour, refMinute, refSecond);
     let curTime = curDate.getTime();
     let milisec = (days * 24 * 60 * 60 * 1000) + (hours * 60 * 60 * 1000) + (minutes * 60 * 1000);
@@ -59,8 +57,6 @@ form.addEventListener('submit', function(e) {
     // Calculate future time and date
     let futureTime = curTime + milisec;
     let futureDate = new Date(futureTime);
-
-    console.log(futureDate);
 
     let resultStr = getDisplayDate(curDate, futureDate);
     result.innerHTML = resultStr;
