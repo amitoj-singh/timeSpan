@@ -72,6 +72,12 @@ form.addEventListener('submit', function(e) {
     }
 });
 
+document.addEventListener("keydown", function(evt) {
+    if (evt.key === "Escape") {
+        hidePopContainer();
+    }
+});
+
 const close = document.querySelector(".close");
 
 const hidePopContainer = () => {
