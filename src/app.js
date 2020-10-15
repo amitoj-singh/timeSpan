@@ -72,6 +72,7 @@ form.addEventListener('submit', function(e) {
     }
 });
 
+// To close result pop-up using escape key
 document.addEventListener("keydown", function(evt) {
     if (evt.key === "Escape") {
         hidePopContainer();
