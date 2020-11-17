@@ -1,3 +1,8 @@
+*{
+        margin: 0;
+        padding: 0;
+        outline: none;}
+
 h1, h2 {
     text-transform: capitalize;
 }
@@ -49,5 +54,15 @@ h1, h2 {
 .close{
     position: absolute;
     right: 20px;
-    top:20px;   
+    top:20px;
 }
+
+body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#c2ced1,#3e585e);
+  }
+
+
+  
